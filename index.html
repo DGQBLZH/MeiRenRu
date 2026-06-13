@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meirenru fan lights — Engineered airflow and beautiful illumination for every room.">
+  <title>Fan Lights — Meirenru</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">美人如</a>
+      <ul class="nav-links">
+        <li><a href="#products" data-i18n="nav.products">Products</a></li>
+        <li><a href="#features" data-i18n="nav.features">Features</a></li>
+        <li><a href="#design" data-i18n="nav.design">Design</a></li>
+        <li><a href="#specs" data-i18n="nav.specs">Specs</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-switch" id="langSwitch" type="button" data-i18n="nav.lang">中文</button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" data-i18n-aria="nav.menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">Meirenru</p>
+      <h1 class="hero-title" data-i18n="hero.title">Fan Lights</h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">Engineered airflow. Beautiful light.</p>
+      <div class="hero-cta">
+        <a href="#products" class="btn btn-link"><span data-i18n="hero.cta.explore">Explore the lineup</span> <span aria-hidden="true">›</span></a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="fan-unit size-md" id="heroFan" data-variant="white">
+        <div class="fan-mount"></div>
+        <div class="fan-body">
+          <div class="fan-light-ring"></div>
+          <div class="fan-hub"></div>
+        </div>
+        <div class="fan-blades">
+          <div class="blade blade-1"></div>
+          <div class="blade blade-2"></div>
+          <div class="blade blade-3"></div>
+        </div>
+      </div>
+      <div class="hero-glow"></div>
+    </div>
+  </section>
+
+  <!-- Tagline -->
+  <section class="tagline-section">
+    <h2 class="tagline reveal" data-i18n-html="tagline">
+      One collection,<br>
+      <span class="gradient-text">redefines</span> how your home breathes.
+    </h2>
+  </section>
+
+  <!-- Products Lineup -->
+  <section class="products-section" id="products">
+    <div class="products-header reveal">
+      <h2 class="products-title" data-i18n="products.title">The lineup.</h2>
+      <p class="products-subtitle" data-i18n="products.subtitle">Five models. Every room covered.</p>
+    </div>
+    <div class="products-grid">
+      <article class="product-card reveal" id="product-aura">
+        <div class="product-card-visual bg-dark">
+          <div class="fan-unit size-sm" data-variant="white">
+            <div class="fan-mount"></div>
+            <div class="fan-body"><div class="fan-light-ring"></div><div class="fan-hub"></div></div>
+            <div class="fan-blades"><div class="blade blade-1"></div><div class="blade blade-2"></div><div class="blade blade-3"></div></div>
+          </div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-meta">
+            <h3><span data-i18n="product.aura.name">Aura</span> <span class="product-size" data-i18n="product.aura.size">52"</span></h3>
+            <p class="product-tagline" data-i18n="product.aura.tagline">Flagship smart fan light</p>
+          </div>
+          <p class="product-desc" data-i18n="product.aura.desc">Full-spectrum lighting, whisper-quiet motor, and whole-home smart control.</p>
+          <a href="#spotlight-aura" class="product-link"><span data-i18n="products.learn">Learn more</span> <span aria-hidden="true">›</span></a>
+        </div>
+      </article>
+
+      <article class="product-card reveal" id="product-aura-pro">
+        <div class="product-card-visual bg-dark">
+          <div class="fan-unit size-sm glow-gold" data-variant="gold">
+            <div class="fan-mount"></div>
+            <div class="fan-body"><div class="fan-light-ring ring-warm"></div><div class="fan-hub"></div></div>
+            <div class="fan-blades"><div class="blade blade-1"></div><div class="blade blade-2"></div><div class="blade blade-3"></div></div>
+          </div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-meta">
+            <h3><span data-i18n="product.auraPro.name">Aura Pro</span> <span class="product-size" data-i18n="product.auraPro.size">52"</span></h3>
+            <p class="product-tagline" data-i18n="product.auraPro.tagline">Premium automation</p>
+          </div>
+          <p class="product-desc" data-i18n="product.auraPro.desc">Scene intelligence, adaptive airflow, and pro-grade light calibration.</p>
+          <a href="#spotlight-aura" class="product-link"><span data-i18n="products.learn">Learn more</span> <span aria-hidden="true">›</span></a>
+        </div>
+      </article>
+
+      <article class="product-card reveal" id="product-breeze">
+        <div class="product-card-visual bg-light">
+          <div class="fan-unit size-sm blades-4" data-variant="white">
+            <div class="fan-mount"></div>
+            <div class="fan-body"><div class="fan-light-ring ring-soft"></div><div class="fan-hub"></div></div>
+            <div class="fan-blades"><div class="blade blade-1"></div><div class="blade blade-2"></div><div class="blade blade-3"></div><div class="blade blade-4"></div></div>
+          </div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-meta">
+            <h3><span data-i18n="product.breeze.name">Breeze</span> <span class="product-size" data-i18n="product.breeze.size">42"</span></h3>
+            <p class="product-tagline" data-i18n="product.breeze.tagline">Bedroom quiet series</p>
+          </div>
+          <p class="product-desc" data-i18n="product.breeze.desc">Ultra-low 22 dB operation with soft night light for restful sleep.</p>
+          <a href="#spotlight-breeze" class="product-link"><span data-i18n="products.learn">Learn more</span> <span aria-hidden="true">›</span></a>
+        </div>
+      </article>
+
+      <article class="product-card reveal" id="product-luna">
+        <div class="product-card-visual bg-dark">
+          <div class="fan-unit size-xs blades-thin" data-variant="black">
+            <div class="fan-mount"></div>
+            <div class="fan-body"><div class="fan-light-ring"></div><div class="fan-hub"></div></div>
+            <div class="fan-blades"><div class="blade blade-1"></div><div class="blade blade-2"></div><div class="blade blade-3"></div></div>
+          </div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-meta">
+            <h3><span data-i18n="product.luna.name">Luna</span> <span class="product-size" data-i18n="product.luna.size">36"</span></h3>
+            <p class="product-tagline" data-i18n="product.luna.tagline">Compact minimalist</p>
+          </div>
+          <p class="product-desc" data-i18n="product.luna.desc">Slim profile for apartments and small rooms without compromising performance.</p>
+          <a href="#features" class="product-link"><span data-i18n="products.learn">Learn more</span> <span aria-hidden="true">›</span></a>
+        </div>
+      </article>
+
+      <article class="product-card reveal product-card-wide" id="product-harbor">
+        <div class="product-card-visual bg-gradient">
+          <div class="fan-unit size-lg blades-5" data-variant="silver">
+            <div class="fan-mount"></div>
+            <div class="fan-body body-lg"><div class="fan-light-ring ring-bright"></div><div class="fan-hub"></div></div>
+            <div class="fan-blades"><div class="blade blade-1"></div><div class="blade blade-2"></div><div class="blade blade-3"></div><div class="blade blade-4"></div><div class="blade blade-5"></div></div>
+          </div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-meta">
+            <h3><span data-i18n="product.harbor.name">Harbor</span> <span class="product-size" data-i18n="product.harbor.size">56"</span></h3>
+            <p class="product-tagline" data-i18n="product.harbor.tagline">Grand living spaces</p>
+          </div>
+          <p class="product-desc" data-i18n="product.harbor.desc">High-volume airflow and 4,200 lm output for open-plan homes and lofts.</p>
+          <a href="#spotlight-harbor" class="product-link"><span data-i18n="products.learn">Learn more</span> <span aria-hidden="true">›</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Product Spotlight: Aura -->
+  <section class="spotlight spotlight-dark" id="spotlight-aura">
+    <div class="spotlight-inner">
+      <div class="spotlight-text reveal">
+        <p class="feature-label" data-i18n="spotlight.aura.label">Flagship</p>
+        <h2 class="spotlight-title" data-i18n-html="spotlight.aura.title">Aura.<br>Light and air, perfected.</h2>
+        <p class="spotlight-desc" data-i18n="spotlight.aura.desc">The definitive Meirenru fan light. A 52-inch span, CRI 97+ ring lighting, and a brushless motor so quiet you forget it is running.</p>
+      </div>
+      <div class="spotlight-visual reveal">
+        <div class="fan-unit size-lg" data-variant="white">
+          <div class="fan-mount"></div>
+          <div class="fan-body"><div class="fan-light-ring"></div><div class="fan-hub"></div></div>
+          <div class="fan-blades spinning"><div class="blade blade-1"></div><div class="blade blade-2"></div><div class="blade blade-3"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Spotlight: Breeze -->
+  <section class="spotlight spotlight-light" id="spotlight-breeze">
+    <div class="spotlight-inner reverse">
+      <div class="spotlight-text reveal">
+        <p class="feature-label" data-i18n="spotlight.breeze.label">Bedroom</p>
+        <h2 class="spotlight-title" data-i18n-html="spotlight.breeze.title">Breeze.<br>Sleep in silence.</h2>
+        <p class="spotlight-desc" data-i18n="spotlight.breeze.desc">Four aerodynamic blades and a dedicated sleep mode drop noise to 22 dB. A warm amber night light guides you without disrupting rest.</p>
+      </div>
+      <div class="spotlight-visual reveal">
+        <div class="fan-unit size-md blades-4" data-variant="white">
+          <div class="fan-mount"></div>
+          <div class="fan-body"><div class="fan-light-ring ring-soft"></div><div class="fan-hub"></div></div>
+          <div class="fan-blades spinning-slow"><div class="blade blade-1"></div><div class="blade blade-2"></div><div class="blade blade-3"></div><div class="blade blade-4"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Spotlight: Harbor -->
+  <section class="spotlight spotlight-dark" id="spotlight-harbor">
+    <div class="spotlight-inner">
+      <div class="spotlight-text reveal">
+        <p class="feature-label" data-i18n="spotlight.harbor.label">Living Room</p>
+        <h2 class="spotlight-title" data-i18n-html="spotlight.harbor.title">Harbor.<br>Built for open spaces.</h2>
+        <p class="spotlight-desc" data-i18n="spotlight.harbor.desc">A 56-inch sweep moves 10,200 m³/h of air across large rooms. Five blades and dual LED rings deliver even coverage from wall to wall.</p>
+      </div>
+      <div class="spotlight-visual reveal">
+        <div class="fan-unit size-xl blades-5" data-variant="silver">
+          <div class="fan-mount"></div>
+          <div class="fan-body body-lg"><div class="fan-light-ring ring-bright"></div><div class="fan-hub"></div></div>
+          <div class="fan-blades spinning"><div class="blade blade-1"></div><div class="blade blade-2"></div><div class="blade blade-3"></div><div class="blade blade-4"></div><div class="blade blade-5"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature: Silent -->
+  <section class="feature feature-dark" id="features">
+    <div class="feature-inner">
+      <div class="feature-text reveal">
+        <p class="feature-label" data-i18n="feature.silent.label">Quiet Motor</p>
+        <h2 class="feature-title" data-i18n-html="feature.silent.title">As low as 28 dB.<br>Quieter than a whisper.</h2>
+        <p class="feature-desc" data-i18n="feature.silent.desc">
+          An aerospace-grade brushless DC motor with precision dynamic balancing keeps operation nearly silent—even at maximum speed. Let the breeze fade into the background.
+        </p>
+      </div>
+      <div class="feature-visual reveal">
+        <div class="decibel-meter">
+          <div class="decibel-bar" style="--height: 15%"></div>
+          <div class="decibel-bar" style="--height: 25%"></div>
+          <div class="decibel-bar" style="--height: 35%"></div>
+          <div class="decibel-bar highlight" style="--height: 28%"></div>
+          <div class="decibel-bar" style="--height: 55%"></div>
+          <div class="decibel-bar" style="--height: 70%"></div>
+          <div class="decibel-bar" style="--height: 85%"></div>
+        </div>
+        <p class="decibel-label">28 dB · Aura</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature: Light -->
+  <section class="feature feature-light">
+    <div class="feature-inner reverse">
+      <div class="feature-text reveal">
+        <p class="feature-label" data-i18n="feature.light.label">Full-Spectrum Lighting</p>
+        <h2 class="feature-title" data-i18n-html="feature.light.title">2700K to 6500K.<br>From warm dusk to clear daylight.</h2>
+        <p class="feature-desc" data-i18n="feature.light.desc">
+          120 high-CRI LEDs (CRI 97+) with stepless color temperature and brightness adjusted down to 1%. Whether reading, dining, or relaxing, find the light that feels right.
+        </p>
+      </div>
+      <div class="feature-visual reveal">
+        <div class="light-spectrum">
+          <div class="spectrum-ring" id="spectrumRing"></div>
+          <div class="spectrum-labels">
+            <span>2700K</span>
+            <span>4000K</span>
+            <span>6500K</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature: Smart -->
+  <section class="feature feature-dark">
+    <div class="feature-inner">
+      <div class="feature-text reveal">
+        <p class="feature-label" data-i18n="feature.smart.label">Smart Connectivity</p>
+        <h2 class="feature-title" data-i18n-html="feature.smart.title">One command.<br>Air and light, together.</h2>
+        <p class="feature-desc" data-i18n="feature.smart.desc">
+          Works with HomeKit, Mi Home, and Tmall Genie—or control remotely via the Meirenru app. Set scenes, schedules, and even auto-adjust fan speed based on room temperature.
+        </p>
+      </div>
+      <div class="feature-visual reveal">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <div class="app-header" data-i18n="app.header">Aura Living Room</div>
+            <div class="app-fan-control">
+              <div class="app-fan-icon spinning-slow"></div>
+              <span class="app-speed" data-i18n="app.speed">Speed 3</span>
+            </div>
+            <div class="app-light-control">
+              <div class="app-brightness">
+                <span data-i18n="app.brightness">Brightness</span>
+                <div class="app-slider"><div class="app-slider-fill" style="width: 72%"></div></div>
+              </div>
+              <div class="app-temp">
+                <span data-i18n="app.temp">Color Temp</span>
+                <div class="app-temp-bar"></div>
+              </div>
+            </div>
+            <div class="app-scenes">
+              <div class="scene active" data-i18n="app.scene.read">Read</div>
+              <div class="scene" data-i18n="app.scene.sleep">Sleep</div>
+              <div class="scene" data-i18n="app.scene.party">Party</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Section -->
+  <section class="design-section" id="design">
+    <div class="design-header reveal">
+      <p class="feature-label" data-i18n="design.label">Design</p>
+      <h2 class="design-title" data-i18n-html="design.title">Minimal.<br>Refined in every detail.</h2>
+    </div>
+    <div class="design-grid">
+      <div class="design-card reveal">
+        <div class="design-card-visual card-material">
+          <div class="material-sample"></div>
+        </div>
+        <h3 data-i18n="design.material.title">Aerospace Aluminum</h3>
+        <p data-i18n="design.material.desc">CNC-machined from a single block with anodized finish—smooth to the touch and built to last.</p>
+      </div>
+      <div class="design-card reveal">
+        <div class="design-card-visual card-blade">
+          <div class="blade-profile"></div>
+        </div>
+        <h3 data-i18n="design.blade.title">Aerodynamic Blades</h3>
+        <p data-i18n="design.blade.desc">Bio-inspired airfoil design in a three-blade layout for smoother airflow and 40% wider coverage.</p>
+      </div>
+      <div class="design-card reveal">
+        <div class="design-card-visual card-ring">
+          <div class="ring-light"></div>
+        </div>
+        <h3 data-i18n="design.ring.title">Ring Diffused Light</h3>
+        <p data-i18n="design.ring.desc">Hidden LED strip with diffused reflection eliminates glare and evenly lights the entire room.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Colors -->
+  <section class="colors-section">
+    <h2 class="colors-title reveal" data-i18n-html="colors.title">Four finishes.<br>Made for every space.</h2>
+    <div class="color-options reveal">
+      <button class="color-option active" data-color="white" data-i18n-aria="colors.white">
+        <span class="color-swatch" style="--swatch: #f5f5f7"></span>
+        <span class="color-name" data-i18n="colors.white">Matte White</span>
+      </button>
+      <button class="color-option" data-color="silver" data-i18n-aria="colors.silver">
+        <span class="color-swatch" style="--swatch: #d2d2d7"></span>
+        <span class="color-name" data-i18n="colors.silver">Space Silver</span>
+      </button>
+      <button class="color-option" data-color="gold" data-i18n-aria="colors.gold">
+        <span class="color-swatch" style="--swatch: #c9a96e"></span>
+        <span class="color-name" data-i18n="colors.gold">Champagne Gold</span>
+      </button>
+      <button class="color-option" data-color="black" data-i18n-aria="colors.black">
+        <span class="color-swatch" style="--swatch: #1d1d1f"></span>
+        <span class="color-name" data-i18n="colors.black">Midnight Black</span>
+      </button>
+    </div>
+    <div class="color-preview reveal" id="colorPreview">
+      <div class="fan-unit preview-fan size-md" data-variant="white">
+        <div class="fan-mount"></div>
+        <div class="fan-body">
+          <div class="fan-light-ring"></div>
+          <div class="fan-hub"></div>
+        </div>
+        <div class="fan-blades">
+          <div class="blade blade-1"></div>
+          <div class="blade blade-2"></div>
+          <div class="blade blade-3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specs Comparison -->
+  <section class="specs-section" id="specs">
+    <h2 class="specs-title reveal" data-i18n="specs.title">Compare models</h2>
+    <div class="specs-table-wrap reveal">
+      <table class="specs-table">
+        <thead>
+          <tr>
+            <th data-i18n="specs.col.model">Model</th>
+            <th data-i18n="specs.col.size">Size</th>
+            <th data-i18n="specs.col.airflow">Max Airflow</th>
+            <th data-i18n="specs.col.noise">Noise</th>
+            <th data-i18n="specs.col.light">Max Brightness</th>
+            <th data-i18n="specs.col.smart">Smart Control</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Aura</td>
+            <td>52" / 132 cm</td>
+            <td>8,500 m³/h</td>
+            <td>28–52 dB</td>
+            <td>3,600 lm</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Aura Pro</td>
+            <td>52" / 132 cm</td>
+            <td>8,500 m³/h</td>
+            <td>28–52 dB</td>
+            <td>3,600 lm</td>
+            <td>✓ Pro</td>
+          </tr>
+          <tr>
+            <td>Breeze</td>
+            <td>42" / 107 cm</td>
+            <td>5,200 m³/h</td>
+            <td>22–45 dB</td>
+            <td>2,400 lm</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Luna</td>
+            <td>36" / 91 cm</td>
+            <td>3,800 m³/h</td>
+            <td>26–48 dB</td>
+            <td>2,000 lm</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Harbor</td>
+            <td>56" / 142 cm</td>
+            <td>10,200 m³/h</td>
+            <td>32–55 dB</td>
+            <td>4,200 lm</td>
+            <td>✓</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">美人如</span>
+        <p data-i18n="footer.tagline">Air and light, redefining home comfort.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4 data-i18n="footer.products">Products</h4>
+          <a href="#product-aura" data-i18n="footer.product.aura">Aura</a>
+          <a href="#product-breeze" data-i18n="footer.product.breeze">Breeze</a>
+          <a href="#product-luna" data-i18n="footer.product.luna">Luna</a>
+          <a href="#product-harbor" data-i18n="footer.product.harbor">Harbor</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.support">Support</h4>
+          <a href="#" data-i18n="footer.support.install">Installation Guide</a>
+          <a href="#" data-i18n="footer.support.warranty">Warranty</a>
+          <a href="#" data-i18n="footer.support.contact">Contact Us</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.company">Company</h4>
+          <a href="#" data-i18n="footer.company.about">About Us</a>
+          <a href="#" data-i18n="footer.company.news">News</a>
+          <a href="#" data-i18n="footer.company.careers">Careers</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer.copyright">Copyright © 2026 Meirenru. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="#" data-i18n="footer.terms">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
