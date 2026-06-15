@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Meirenru fan lights — Engineered airflow and beautiful illumination for every room.">
-  <title>Fan Lights — Meirenru</title>
+  <meta name="description" content="merenro fan lights — Engineered airflow and beautiful illumination for every room.">
+  <title>Fan Lights — merenro</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,9 +14,11 @@
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">美人如</a>
+      <a href="#" class="nav-logo" data-i18n="brand.name">merenro</a>
       <ul class="nav-links">
         <li><a href="#products" data-i18n="nav.products">Products</a></li>
+        <li><a href="#cases" data-i18n="nav.cases">Cases</a></li>
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
         <li><a href="#features" data-i18n="nav.features">Features</a></li>
         <li><a href="#design" data-i18n="nav.design">Design</a></li>
         <li><a href="#specs" data-i18n="nav.specs">Specs</a></li>
@@ -34,7 +36,7 @@
   <!-- Hero -->
   <section class="hero" id="top">
     <div class="hero-content">
-      <p class="hero-eyebrow" data-i18n="hero.eyebrow">Meirenru</p>
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">merenro</p>
       <h1 class="hero-title" data-i18n="hero.title">Fan Lights</h1>
       <p class="hero-subtitle" data-i18n="hero.subtitle">Engineered airflow. Beautiful light.</p>
       <div class="hero-cta">
@@ -42,18 +44,13 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div class="fan-unit size-md" id="heroFan" data-variant="white">
-        <div class="fan-mount"></div>
-        <div class="fan-body">
-          <div class="fan-light-ring"></div>
-          <div class="fan-hub"></div>
-        </div>
-        <div class="fan-blades">
-          <div class="blade blade-1"></div>
-          <div class="blade blade-2"></div>
-          <div class="blade blade-3"></div>
-        </div>
-      </div>
+      <img
+        class="hero-image"
+        src="images/hero.jpg"
+        alt="merenro fan light collection"
+        width="560"
+        height="420"
+      >
       <div class="hero-glow"></div>
     </div>
   </section>
@@ -75,11 +72,7 @@
     <div class="products-grid">
       <article class="product-card reveal" id="product-aura">
         <div class="product-card-visual bg-dark">
-          <div class="fan-unit size-sm" data-variant="white">
-            <div class="fan-mount"></div>
-            <div class="fan-body"><div class="fan-light-ring"></div><div class="fan-hub"></div></div>
-            <div class="fan-blades"><div class="blade blade-1"></div><div class="blade blade-2"></div><div class="blade blade-3"></div></div>
-          </div>
+          <img class="product-image" src="images/product-aura.jpg" alt="Aura fan light" width="400" height="300">
         </div>
         <div class="product-card-body">
           <div class="product-card-meta">
@@ -93,11 +86,7 @@
 
       <article class="product-card reveal" id="product-aura-pro">
         <div class="product-card-visual bg-dark">
-          <div class="fan-unit size-sm glow-gold" data-variant="gold">
-            <div class="fan-mount"></div>
-            <div class="fan-body"><div class="fan-light-ring ring-warm"></div><div class="fan-hub"></div></div>
-            <div class="fan-blades"><div class="blade blade-1"></div><div class="blade blade-2"></div><div class="blade blade-3"></div></div>
-          </div>
+          <img class="product-image" src="images/product-aura-pro.jpg" alt="Aura Pro fan light" width="400" height="300">
         </div>
         <div class="product-card-body">
           <div class="product-card-meta">
@@ -111,11 +100,7 @@
 
       <article class="product-card reveal" id="product-breeze">
         <div class="product-card-visual bg-light">
-          <div class="fan-unit size-sm blades-4" data-variant="white">
-            <div class="fan-mount"></div>
-            <div class="fan-body"><div class="fan-light-ring ring-soft"></div><div class="fan-hub"></div></div>
-            <div class="fan-blades"><div class="blade blade-1"></div><div class="blade blade-2"></div><div class="blade blade-3"></div><div class="blade blade-4"></div></div>
-          </div>
+          <img class="product-image" src="images/product-breeze.jpg" alt="Breeze fan light" width="400" height="300">
         </div>
         <div class="product-card-body">
           <div class="product-card-meta">
@@ -129,11 +114,7 @@
 
       <article class="product-card reveal" id="product-luna">
         <div class="product-card-visual bg-dark">
-          <div class="fan-unit size-xs blades-thin" data-variant="black">
-            <div class="fan-mount"></div>
-            <div class="fan-body"><div class="fan-light-ring"></div><div class="fan-hub"></div></div>
-            <div class="fan-blades"><div class="blade blade-1"></div><div class="blade blade-2"></div><div class="blade blade-3"></div></div>
-          </div>
+          <img class="product-image" src="images/product-luna.jpg" alt="Luna fan light" width="400" height="300">
         </div>
         <div class="product-card-body">
           <div class="product-card-meta">
@@ -147,11 +128,7 @@
 
       <article class="product-card reveal product-card-wide" id="product-harbor">
         <div class="product-card-visual bg-gradient">
-          <div class="fan-unit size-lg blades-5" data-variant="silver">
-            <div class="fan-mount"></div>
-            <div class="fan-body body-lg"><div class="fan-light-ring ring-bright"></div><div class="fan-hub"></div></div>
-            <div class="fan-blades"><div class="blade blade-1"></div><div class="blade blade-2"></div><div class="blade blade-3"></div><div class="blade blade-4"></div><div class="blade blade-5"></div></div>
-          </div>
+          <img class="product-image" src="images/product-harbor.jpg" alt="Harbor fan light" width="480" height="360">
         </div>
         <div class="product-card-body">
           <div class="product-card-meta">
@@ -174,11 +151,7 @@
         <p class="spotlight-desc" data-i18n="spotlight.aura.desc">The definitive Meirenru fan light. A 52-inch span, CRI 97+ ring lighting, and a brushless motor so quiet you forget it is running.</p>
       </div>
       <div class="spotlight-visual reveal">
-        <div class="fan-unit size-lg" data-variant="white">
-          <div class="fan-mount"></div>
-          <div class="fan-body"><div class="fan-light-ring"></div><div class="fan-hub"></div></div>
-          <div class="fan-blades spinning"><div class="blade blade-1"></div><div class="blade blade-2"></div><div class="blade blade-3"></div></div>
-        </div>
+        <img class="spotlight-image" src="images/spotlight-aura.jpg" alt="Aura fan light detail" width="560" height="420">
       </div>
     </div>
   </section>
@@ -192,11 +165,7 @@
         <p class="spotlight-desc" data-i18n="spotlight.breeze.desc">Four aerodynamic blades and a dedicated sleep mode drop noise to 22 dB. A warm amber night light guides you without disrupting rest.</p>
       </div>
       <div class="spotlight-visual reveal">
-        <div class="fan-unit size-md blades-4" data-variant="white">
-          <div class="fan-mount"></div>
-          <div class="fan-body"><div class="fan-light-ring ring-soft"></div><div class="fan-hub"></div></div>
-          <div class="fan-blades spinning-slow"><div class="blade blade-1"></div><div class="blade blade-2"></div><div class="blade blade-3"></div><div class="blade blade-4"></div></div>
-        </div>
+        <img class="spotlight-image" src="images/spotlight-breeze.jpg" alt="Breeze fan light detail" width="560" height="420">
       </div>
     </div>
   </section>
@@ -210,11 +179,7 @@
         <p class="spotlight-desc" data-i18n="spotlight.harbor.desc">A 56-inch sweep moves 10,200 m³/h of air across large rooms. Five blades and dual LED rings deliver even coverage from wall to wall.</p>
       </div>
       <div class="spotlight-visual reveal">
-        <div class="fan-unit size-xl blades-5" data-variant="silver">
-          <div class="fan-mount"></div>
-          <div class="fan-body body-lg"><div class="fan-light-ring ring-bright"></div><div class="fan-hub"></div></div>
-          <div class="fan-blades spinning"><div class="blade blade-1"></div><div class="blade blade-2"></div><div class="blade blade-3"></div><div class="blade blade-4"></div><div class="blade blade-5"></div></div>
-        </div>
+        <img class="spotlight-image" src="images/spotlight-harbor.jpg" alt="Harbor fan light detail" width="560" height="420">
       </div>
     </div>
   </section>
@@ -315,21 +280,21 @@
     <div class="design-grid">
       <div class="design-card reveal">
         <div class="design-card-visual card-material">
-          <div class="material-sample"></div>
+          <img class="design-image" src="images/design-material.jpg" alt="Aerospace aluminum finish" width="240" height="160">
         </div>
         <h3 data-i18n="design.material.title">Aerospace Aluminum</h3>
         <p data-i18n="design.material.desc">CNC-machined from a single block with anodized finish—smooth to the touch and built to last.</p>
       </div>
       <div class="design-card reveal">
         <div class="design-card-visual card-blade">
-          <div class="blade-profile"></div>
+          <img class="design-image" src="images/design-blade.jpg" alt="Aerodynamic fan blade" width="280" height="120">
         </div>
         <h3 data-i18n="design.blade.title">Aerodynamic Blades</h3>
         <p data-i18n="design.blade.desc">Bio-inspired airfoil design in a three-blade layout for smoother airflow and 40% wider coverage.</p>
       </div>
       <div class="design-card reveal">
         <div class="design-card-visual card-ring">
-          <div class="ring-light"></div>
+          <img class="design-image" src="images/design-ring.jpg" alt="Ring diffused light" width="200" height="200">
         </div>
         <h3 data-i18n="design.ring.title">Ring Diffused Light</h3>
         <p data-i18n="design.ring.desc">Hidden LED strip with diffused reflection eliminates glare and evenly lights the entire room.</p>
@@ -337,40 +302,54 @@
     </div>
   </section>
 
-  <!-- Colors -->
-  <section class="colors-section">
-    <h2 class="colors-title reveal" data-i18n-html="colors.title">Four finishes.<br>Made for every space.</h2>
-    <div class="color-options reveal">
-      <button class="color-option active" data-color="white" data-i18n-aria="colors.white">
-        <span class="color-swatch" style="--swatch: #f5f5f7"></span>
-        <span class="color-name" data-i18n="colors.white">Matte White</span>
-      </button>
-      <button class="color-option" data-color="silver" data-i18n-aria="colors.silver">
-        <span class="color-swatch" style="--swatch: #d2d2d7"></span>
-        <span class="color-name" data-i18n="colors.silver">Space Silver</span>
-      </button>
-      <button class="color-option" data-color="gold" data-i18n-aria="colors.gold">
-        <span class="color-swatch" style="--swatch: #c9a96e"></span>
-        <span class="color-name" data-i18n="colors.gold">Champagne Gold</span>
-      </button>
-      <button class="color-option" data-color="black" data-i18n-aria="colors.black">
-        <span class="color-swatch" style="--swatch: #1d1d1f"></span>
-        <span class="color-name" data-i18n="colors.black">Midnight Black</span>
-      </button>
-    </div>
-    <div class="color-preview reveal" id="colorPreview">
-      <div class="fan-unit preview-fan size-md" data-variant="white">
-        <div class="fan-mount"></div>
-        <div class="fan-body">
-          <div class="fan-light-ring"></div>
-          <div class="fan-hub"></div>
-        </div>
-        <div class="fan-blades">
-          <div class="blade blade-1"></div>
-          <div class="blade blade-2"></div>
-          <div class="blade blade-3"></div>
-        </div>
+  <!-- Company About -->
+  <section class="about-section" id="about">
+    <div class="about-inner reveal">
+      <p class="feature-label" data-i18n="about.label">About Us</p>
+      <h2 class="about-title" data-i18n="about.title">Crafting fan lights for over a decade.</h2>
+      <div class="about-content">
+        <p data-i18n="about.p1">Zhongshan Meirenru Lighting Technology Co., Ltd. evolved from Hong Kong Meirenru Lighting & Electrical—a large modern enterprise dedicated to developing, manufacturing, and selling luxury decorative fan lights.</p>
+        <p data-i18n="about.p2">Founded in Hong Kong twelve years ago, Meirenru has always put user needs first, focusing on quality, product innovation, and attentive after-sales service. In late 2021, we registered Zhongshan Meirenru Lighting Technology Co., Ltd. to better serve the domestic market. Today we occupy over 10,000 m², employ more than 200 team members, operate advanced international production lines, and maintain ISO9001 and RoHS compliance—with a defect rate below 0.03%.</p>
+        <p data-i18n="about.p3">Meirenru luxury decorative fan lights are recognized for outstanding quality, strong reputation, dedicated service, and deep R&amp;D capabilities—consistently ranking among the industry's best. With integrity, quality, and service at our core, we create a healthier, higher-quality life for millions of homes.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- Installation Cases -->
+  <section class="cases-section" id="cases">
+    <div class="cases-header reveal">
+      <p class="feature-label" data-i18n="cases.label">Installation Cases</p>
+      <h2 class="cases-title" data-i18n="cases.title">Real homes. Real results.</h2>
+      <p class="cases-subtitle" data-i18n="cases.subtitle">See how Meirenru fan lights look in actual customer spaces.</p>
+    </div>
+    <div class="cases-grid">
+      <figure class="case-card reveal">
+        <div class="case-image-wrap">
+          <img class="case-image" src="images/case-1.jpg" alt="Customer installation case 1" width="640" height="480">
+        </div>
+        <figcaption>
+          <h3 data-i18n="cases.1.title">Modern Living Room</h3>
+          <p data-i18n="cases.1.desc">Aura 52" in matte white — open-plan apartment, Guangzhou</p>
+        </figcaption>
+      </figure>
+      <figure class="case-card reveal">
+        <div class="case-image-wrap">
+          <img class="case-image" src="images/case-2.jpg" alt="Customer installation case 2" width="640" height="480">
+        </div>
+        <figcaption>
+          <h3 data-i18n="cases.2.title">Master Bedroom</h3>
+          <p data-i18n="cases.2.desc">Breeze 42" with sleep mode — private residence, Shenzhen</p>
+        </figcaption>
+      </figure>
+      <figure class="case-card reveal">
+        <div class="case-image-wrap">
+          <img class="case-image" src="images/case-3.jpg" alt="Customer installation case 3" width="640" height="480">
+        </div>
+        <figcaption>
+          <h3 data-i18n="cases.3.title">Dining &amp; Kitchen</h3>
+          <p data-i18n="cases.3.desc">Harbor 56" — villa project, Zhongshan</p>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
@@ -439,7 +418,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="footer-logo">美人如</span>
+        <span class="footer-logo" data-i18n="brand.name">merenro</span>
         <p data-i18n="footer.tagline">Air and light, redefining home comfort.</p>
       </div>
       <div class="footer-links">
@@ -451,21 +430,29 @@
           <a href="#product-harbor" data-i18n="footer.product.harbor">Harbor</a>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer.support">Support</h4>
-          <a href="#" data-i18n="footer.support.install">Installation Guide</a>
-          <a href="#" data-i18n="footer.support.warranty">Warranty</a>
-          <a href="#" data-i18n="footer.support.contact">Contact Us</a>
+          <h4 data-i18n="footer.company">Company</h4>
+          <a href="#about" data-i18n="footer.company.about">About Us</a>
+          <a href="#" data-i18n="footer.company.news">News</a>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer.company">Company</h4>
-          <a href="#" data-i18n="footer.company.about">About Us</a>
-          <a href="#" data-i18n="footer.company.news">News</a>
-          <a href="#" data-i18n="footer.company.careers">Careers</a>
+          <h4 data-i18n="footer.contact">Contact Us</h4>
+          <p class="footer-contact-line">
+            <span data-i18n="footer.contact.email">Email</span>:
+            <a href="#" id="contactEmail">info@merenro.com</a>
+          </p>
+          <p class="footer-contact-line">
+            <span data-i18n="footer.contact.facebook">Facebook</span>:
+            <a href="#" id="contactFacebook" target="_blank" rel="noopener noreferrer">@merenro</a>
+          </p>
+          <p class="footer-contact-line">
+            <span data-i18n="footer.contact.twitter">Twitter</span>:
+            <a href="#" id="contactTwitter" target="_blank" rel="noopener noreferrer">@merenro</a>
+          </p>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p data-i18n="footer.copyright">Copyright © 2026 Meirenru. All rights reserved.</p>
+      <p data-i18n="footer.copyright">Copyright © 2026 merenro. All rights reserved.</p>
       <div class="footer-legal">
         <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
         <a href="#" data-i18n="footer.terms">Terms of Use</a>
@@ -473,7 +460,6 @@
     </div>
   </footer>
 
-  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

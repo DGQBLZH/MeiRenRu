@@ -1,8 +1,9 @@
 (function () {
   'use strict';
 
-  const STORAGE_KEY = 'meirenru-lang';
+  const STORAGE_KEY = 'merenro-lang';
   let currentLang = 'en';
+  let contactData = {};
 
   function t(key) {
     return (window.I18N[currentLang] && window.I18N[currentLang][key]) || key;
@@ -30,7 +31,53 @@
     if (metaDesc) metaDesc.content = t('meta.description');
   }
 
-  function initI18n() {
+  function applyContactLinks() {
+    const emailLink = document.getElementById('contactEmail');
+    const facebookLink = document.getElementById('contactFacebook');
+    const twitterLink = document.getElementById('contactTwitter');
+
+    if (emailLink && contactData.email) {
+      emailLink.href = 'mailto:' + contactData.email;
+      emailLink.textContent = contactData.email;
+    }
+    if (facebookLink && contactData.facebook) {
+      facebookLink.href = contactData.facebook;
+      facebookLink.textContent = contactData.facebookDisplay || contactData.facebook;
+    }
+    if (twitterLink && contactData.twitter) {
+      twitterLink.href = contactData.twitter;
+      twitterLink.textContent = contactData.twitterDisplay || contactData.twitter;
+    }
+  }
+
+  async function loadTexts() {
+    const [enRes, zhRes, contactRes, aboutZhRes, aboutEnRes] = await Promise.all([
+      fetch('texts/en.json'),
+      fetch('texts/zh.json'),
+      fetch('texts/contact.json'),
+      fetch('texts/公司简介.txt'),
+      fetch('texts/公司简介-en.txt')
+    ]);
+
+    const en = await enRes.json();
+    const zh = await zhRes.json();
+    contactData = await contactRes.json();
+
+    const aboutZhText = await aboutZhRes.text();
+    const aboutEnText = await aboutEnRes.text();
+    const zhParagraphs = aboutZhText.trim().split('\n').filter(Boolean);
+    const enParagraphs = aboutEnText.trim().split('\n').filter(Boolean);
+
+    zh['about.p1'] = zhParagraphs[0] || '';
+    zh['about.p2'] = zhParagraphs[1] || '';
+    zh['about.p3'] = zhParagraphs[2] || '';
+    en['about.p1'] = enParagraphs[0] || '';
+    en['about.p2'] = enParagraphs[1] || '';
+    en['about.p3'] = enParagraphs[2] || '';
+
+    window.I18N = { en, zh };
+    applyContactLinks();
+
     const saved = localStorage.getItem(STORAGE_KEY);
     const lang = saved === 'zh' ? 'zh' : 'en';
     applyLanguage(lang);
@@ -43,31 +90,25 @@
     }
   }
 
-  initI18n();
+  loadTexts();
 
-  // Navigation scroll effect
   const nav = document.getElementById('nav');
-  let lastScroll = 0;
 
   window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-    nav.classList.toggle('scrolled', currentScroll > 50);
-    lastScroll = currentScroll;
+    nav.classList.toggle('scrolled', window.scrollY > 50);
   }, { passive: true });
 
-  // Mobile nav toggle
   const navToggle = document.getElementById('navToggle');
   if (navToggle) {
     navToggle.addEventListener('click', () => {
       nav.classList.toggle('open');
     });
 
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    document.querySelectorAll('.nav-links a').forEach((link) => {
       link.addEventListener('click', () => nav.classList.remove('open'));
     });
   }
 
-  // Scroll reveal
   const revealElements = document.querySelectorAll('.reveal');
   const revealObserver = new IntersectionObserver(
     (entries) => {
@@ -83,23 +124,6 @@
 
   revealElements.forEach((el) => revealObserver.observe(el));
 
-  // Color picker
-  const colorOptions = document.querySelectorAll('.color-option');
-  const previewFan = document.querySelector('.preview-fan');
-
-  colorOptions.forEach((option) => {
-    option.addEventListener('click', () => {
-      colorOptions.forEach((o) => o.classList.remove('active'));
-      option.classList.add('active');
-
-      const color = option.dataset.color;
-      if (previewFan) {
-        previewFan.dataset.variant = color;
-      }
-    });
-  });
-
-  // Spectrum ring animation on scroll
   const spectrumRing = document.getElementById('spectrumRing');
   if (spectrumRing) {
     const spectrumObserver = new IntersectionObserver(
@@ -123,20 +147,6 @@
     spectrumObserver.observe(spectrumRing);
   }
 
-  // Hero fan speed on scroll
-  const heroFan = document.getElementById('heroFan');
-  if (heroFan) {
-    const blades = heroFan.querySelector('.fan-blades');
-    window.addEventListener('scroll', () => {
-      const scrollPercent = Math.min(window.scrollY / 600, 1);
-      const duration = 8 - scrollPercent * 6;
-      if (blades) {
-        blades.style.animationDuration = `${duration}s`;
-      }
-    }, { passive: true });
-  }
-
-  // Smooth anchor offset for fixed nav
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {
       const targetId = anchor.getAttribute('href');
